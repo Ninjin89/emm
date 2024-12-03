@@ -17,3 +17,37 @@
 3. **Info** (`LogInfo`): Logs general informational messages about normal operations.
 4. **Debug** (`LogDebug`): Logs detailed debugging messages for developers.
 5. **Kill/Damage** (`LogKillsDamage`): Logs specific events related to kills or damage in the system.
+
+
+# Special Case: Log Level 5 (Kill/Damage)
+
+When `m_LogLevel` is set to **5**, the logger explicitly behaves as follows:
+
+- Logs **Warnings** (`LogWarning`) with a log level of **2**.
+- Logs **Kill/Damage** (`LogKillsDamage`) with a log level of **5**.
+- **All other log levels** (1, 3, 4) are **ignored**.
+
+This ensures that only critical warnings and kill/damage events are logged for this specific log level.
+
+# Examples
+
+## Log Level = 1 (Critical)
+- **LogCritical("Critical event.")** → Logged
+- **LogWarning("Potential issue.")** → Not logged
+- **LogKillsDamage("Kill/Damage event.")** → Not logged
+
+## Log Level = 3 (Info)
+- **LogCritical("Critical event.")** → Logged
+- **LogWarning("Potential issue.")** → Logged
+- **LogInfo("System running smoothly.")** → Logged
+- **LogDebug("Detailed debug information.")** → Not logged
+- **LogKillsDamage("Kill/Damage event.")** → Not logged
+
+## Log Level = 5 (Kill/Damage)
+- **LogCritical("Critical event.")** → Not logged
+- **LogWarning("Potential issue.")** → Logged
+- **LogInfo("System running smoothly.")** → Not logged
+- **LogDebug("Detailed debug information.")** → Not logged
+- **LogKillsDamage("Kill/Damage event.")** → Logged
+
+
