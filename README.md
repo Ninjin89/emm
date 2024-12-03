@@ -21,7 +21,7 @@
 
 # Special Case: Log Level 5 (Kill/Damage)
 
-When `m_LogLevel` is set to **5**, the logger explicitly behaves as follows:
+When `LogLevel` is set to **5**, the logger explicitly behaves as follows:
 
 - Logs **Warnings** (`LogWarning`) with a log level of **2**.
 - Logs **Kill/Damage** (`LogKillsDamage`) with a log level of **5**.
