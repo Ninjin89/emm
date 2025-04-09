@@ -2,6 +2,7 @@
 
 | **Log Level**   | **Logged Levels**             | **Explanation**                                                                                             |
 |------------------|-------------------------------|-------------------------------------------------------------------------------------------------------------|
+| **0 (Nothing)** | 0                             | Nothing will be logged and no logfile will be generated.                                                      |
 | **1 (Critical)** | 1                             | Only critical logs (`LogCritical`) will be logged.                                                         |
 | **2 (Warning)**  | 1, 2                         | Critical and warning logs (`LogCritical`, `LogWarning`) will be logged.                                    |
 | **3 (Info)**     | 1, 2, 3                     | Critical, warning, and informational logs (`LogCritical`, `LogWarning`, `LogInfo`) will be logged.         |
