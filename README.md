@@ -13,7 +13,7 @@
 ---
 
 ## Log Level Definitions
-
+0. **Nothing** (`LogCritical`): No logs will be generated at all and also no logfiles.
 1. **Critical** (`LogCritical`): Logs severe events requiring immediate attention.
 2. **Warning** (`LogWarning`): Logs potentially harmful situations or warnings.
 3. **Info** (`LogInfo`): Logs general informational messages about normal operations.
